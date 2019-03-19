@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Galeria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Cm</th>
+      <th>Imagen</th>
+      <th>Detalles</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @galeria.each do |galerium| %>
+      <tr>
+        <td><%= galerium.nombre %></td>
+        <td><%= galerium.cm %></td>
+        <td><%= galerium.imagen %></td>
+        <td><%= galerium.detalles %></td>
+        <td><%= galerium.precio %></td>
+        <td><%= link_to 'Show', galerium %></td>
+        <td><%= link_to 'Edit', edit_galerium_path(galerium) %></td>
+        <td><%= link_to 'Destroy', galerium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Galerium', new_galerium_path %>

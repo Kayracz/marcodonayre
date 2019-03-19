@@ -1,0 +1,22 @@
+
+<%= simple_form_for(@blog) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :titulo %>
+    <%= f.input :texto %>
+    <%= f.input :texto2 %>
+    <%= f.input :texto3 %>
+    <%= f.input :texto4 %>
+    <%= f.input :texto5 %>
+    <%= f.input :texto6 %>
+    <%= f.input :texto7 %>
+    <%= f.input :texto8 %>
+    <%= f.input :imagen %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

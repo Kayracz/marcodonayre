@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @galerium.nombre %>
+</p>
+
+<p>
+  <strong>Cm:</strong>
+  <%= @galerium.cm %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @galerium.imagen %>
+</p>
+
+<p>
+  <strong>Detalles:</strong>
+  <%= @galerium.detalles %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @galerium.precio %>
+</p>
+
+<%= link_to 'Edit', edit_galerium_path(@galerium) %> |
+<%= link_to 'Back', galeria_path %>

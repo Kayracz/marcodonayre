@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@ventum) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :nombre %>
+    <%= f.input :cm %>
+    <%= f.input :imagen %>
+    <%= f.input :detalles %>
+    <%= f.input :precio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
