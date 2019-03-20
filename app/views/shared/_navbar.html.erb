@@ -1,0 +1,39 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+    <div class="name">
+ <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <h1>Marco Donayre</h1>
+      <% end %>
+  </div>
+  <a href="" class="navbar-wagon-brand">
+    <!-- <img src="" alt="logo"> -->
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+  <%= link_to "Inicio", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Biografia", pages_biografia_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Blog", blogs_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Galeria", galeria_path, class: "navbar-wagon-item navbar-wagon-link" %>
+   <%= link_to "Shop", venta_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Contacto", pages_contacto_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#"></a> Inicio </li>
+        <li><a href="#"></a> Biografia</li>
+        <li><a href="#"></a> Blog</li>
+        <li><a href="#"></a> Galeria</li>
+        <li><a href="#"></a> Shop</li>
+        <li><a href="#"></a> Contacto</li>
+      </ul>
+    </div>
+  </div>
+</div>
+

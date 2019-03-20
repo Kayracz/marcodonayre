@@ -19,35 +19,44 @@ import 'bootstrap';
 console.log('Hello World from Webpacker')
 
 
-var min_w = 300;
-var vid_w_orig;
-var vid_h_orig;
 
-$(function() {
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    vid_w_orig = parseInt($('video').attr('width'));
-    vid_h_orig = parseInt($('video').attr('height'));
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      width: '100%',
+      height: '100%',
+      videoId: 'VIDEO_ID',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
 
-    $(window).resize(function () { fitVideo(); });
-    $(window).trigger('resize');
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+    player.mute(); // comment out if you don't want the auto played video muted
+  }
 
-});
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+      player.seekTo(0);
+      player.playVideo();
+    }
+  }
+  function stopVideo() {
+    player.stopVideo();
+  }
 
-function fitVideo() {
-
-    $('#video-viewport').width($('.fullsize-video-bg').width());
-    $('#video-viewport').height($('.fullsize-video-bg').height());
-
-    var scale_h = $('.fullsize-video-bg').width() / vid_w_orig;
-    var scale_v = $('.fullsize-video-bg').height() / vid_h_orig;
-    var scale = scale_h > scale_v ? scale_h : scale_v;
-
-    if (scale * vid_w_orig < min_w) {scale = min_w / vid_w_orig;};
-
-    $('video').width(scale * vid_w_orig);
-    $('video').height(scale * vid_h_orig);
-
-    $('#video-viewport').scrollLeft(($('video').width() - $('.fullsize-video-bg').width()) / 2);
-    $('#video-viewport').scrollTop(($('video').height() - $('.fullsize-video-bg').height()) / 2);
-
-};

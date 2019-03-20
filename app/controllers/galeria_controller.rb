@@ -69,6 +69,6 @@ class GaleriaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def galerium_params
-      params.require(:galerium).permit(:nombre, :cm, :imagen, :detalles, :precio)
+      params.require(:galerium).permit(:nombre, :cm, :imagen, :detalles, :precio, :photo)
     end
 end
