@@ -103,26 +103,27 @@
 
 //FOOTER
 .footer {
-  background: #F4F4F4;
+  background: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  color: white;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: white;
+  opacity: 0.4;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
+  color:red;
   opacity: 1;
 }
 .footer .fa-heart {
@@ -181,5 +182,34 @@ font-weight: lighter;
 text-align:justify;
 
   }
+}
+
+//filterimages
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+//contacto
+
+.bannercontacto{
+  color: white;
+  text-align: center;
+  height: 69vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  background: url(art.jpg);
 }
 
