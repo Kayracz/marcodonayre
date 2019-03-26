@@ -164,7 +164,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-background: url(marco1.jpg);
+background: url(marco9.jpg);
 }
 
 .bio{
@@ -213,3 +213,63 @@ text-align:justify;
   background: url(art.jpg);
 }
 
+.primerapagina{
+
+    h2{
+    font-family: 'Montserrat', sans-serif !important;
+    text-align:center;
+    font-weight: lighter;
+    font-size: 23px;
+    text-align: justify;
+    line-height: 24px;
+    margin-top: 11%;
+
+  }
+
+    h3{
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-align:center;
+    margin-bottom: 10%;
+    }
+
+}
+
+.youtubevideos{
+  align-items: center;
+  margin-bottom: 10%;
+
+  p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5%;
+  }
+}
+
+
+.bannermarco2{
+  color: white;
+  text-align: center;
+  height: 69vh;
+  margin-top: 5%;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: url(marco10.jpg);
+}
+
+
+.socialmedias{
+  margin-bottom: 9%;
+}
+
+.contactando{
+  h1{
+    margin-top: 8%;
+  }
+}

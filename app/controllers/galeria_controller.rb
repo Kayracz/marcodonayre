@@ -10,6 +10,7 @@ class GaleriaController < ApplicationController
   # GET /galeria/1
   # GET /galeria/1.json
   def show
+      @galerium = Galerium.find(params[:id])
   end
 
   # GET /galeria/new
@@ -69,6 +70,6 @@ class GaleriaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def galerium_params
-      params.require(:galerium).permit(:nombre, :cm, :imagen, :detalles, :precio, :photo)
+      params.require(:galerium).permit(:nombre, :detalles, :photo)
     end
 end

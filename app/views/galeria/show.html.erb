@@ -1,18 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<p><%= cl_image_tag @galerium.photo, height: 800, width: 700, crop: :fill %></p>
+
 <p>
   <strong>Nombre:</strong>
   <%= @galerium.nombre %>
-</p>
-
-<p>
-  <strong>Cm:</strong>
-  <%= @galerium.cm %>
-</p>
-
-<p>
-  <strong>Imagen:</strong>
-  <%= @galerium.imagen %>
 </p>
 
 <p>
@@ -20,10 +12,10 @@
   <%= @galerium.detalles %>
 </p>
 
-<p>
-  <strong>Precio:</strong>
-  <%= @galerium.precio %>
-</p>
 
 <%= link_to 'Edit', edit_galerium_path(@galerium) %> |
 <%= link_to 'Back', galeria_path %>
+
+
+
+

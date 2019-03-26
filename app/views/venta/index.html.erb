@@ -1,34 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
+<div class="container tituloventa">
 <h1>En Venta</h1>
 </hr>
 
 
 <!-- <div class="container"> -->
   <!--   <h3 class="h3">shopping Demo-2 </h3> -->
-    <div class="row">
+    <div class="row images2">
   <% @venta.each do |venta| %>
         <div class="col-md-3">
 
             <div class="product-grid2">
-                <div class="product-image2">
-                    <a href="#"><%= cl_image_tag venta.photo %></a>
+                <div class="product-image2 zoomin">
+                    <a href="#"><%= cl_image_tag venta.photo, height: 900, width: 800, crop: :fill  %></a>
                     <ul class="social">
                       <i class="fa fa-shopping-bag"></i></a></li>
                         <li><a href="#" data-tip="Encargar"><i class="fa fa-shopping-cart"></i></a></li>
                     </ul>
                     <a class="add-to-cart" href="">Comprar</a>
                 </div>
-                <div class="product-content">
+                <div class="product-content2">
                     <h3 class="title"><a href="#"><%= link_to venta.nombre, venta_path(venta) %></a></h3>
-                    <span class="price"><%= venta.precio %></span>
+                    <hr>
                     <span class="price"><%= venta.detalles %></span>
-                     <span class="price"><%= venta.cm %></span>
+                    <br>
+                    <span class="price"><%= venta.precio %></span>
+
                 </div>
             </div>
         </div>
    <% end %>
+
+
 
 
 <!--     </div> -->
