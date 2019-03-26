@@ -1,0 +1,19 @@
+
+<div class="container inbox">
+
+<%= simple_form_for(@inbox) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email %> (Numero de obra)
+    <%= f.input :subject %>
+    <%= f.input :message %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>

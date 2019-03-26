@@ -21,18 +21,19 @@
                     <a class="add-to-cart" href="">Comprar</a>
                 </div>
                 <div class="product-content2">
-                    <h3 class="title"><a href="#"><%= link_to venta.nombre, venta_path(venta) %></a></h3>
+                    <h3 class="title"><a href="#"><%= link_to venta.nombre, venta %></a></h3>
                     <hr>
                     <span class="price"><%= venta.detalles %></span>
                     <br>
                     <span class="price"><%= venta.precio %></span>
+                    <br>
+                     <span class="Inquiry"> <%= link_to 'Encargar', new_inbox_path %></span>
+
 
                 </div>
             </div>
         </div>
    <% end %>
-
-
 
 
 <!--     </div> -->
