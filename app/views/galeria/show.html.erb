@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= cl_image_tag @galerium.photo, height: 800, width: 700, crop: :fill %></p>
+
+<div class="container showgallery img-responsive img-fluid">
+  <div class="row">
+     <div class="col-md-8 col-sm-4 responsive image img-fluid">
+<p><%= cl_image_tag @galerium.photo, class: "img-responsive" %></p>
+</div>
+
+<div class="showgalleryinfo col-md-4 col-sm-8">
 
 <p>
   <strong>Nombre:</strong>
@@ -12,10 +19,15 @@
   <%= @galerium.detalles %>
 </p>
 
+<p>
+  <strong>Informacion:</strong>
+  <%= @galerium.info %>
+</p>
 
 
-<%= link_to 'Back', galeria_path %>
 
-
+</div>
+</div>
+</div>
 
 

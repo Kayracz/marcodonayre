@@ -1,10 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= cl_image_tag @ventum.photo, height: 800, width: 700, crop: :fill %></p>
 
+<div class="container showgallery img-responsive img-fluid">
+  <div class="row">
+     <div class="col-md-8 col-sm-4 responsive image img-fluid">
+<p><%= cl_image_tag @ventum.photo, class: "img-responsive" %></p>
+</div>
+
+
+<div class="showgalleryinfo col-md-4 col-sm-8">
 <p>
   <strong>Nombre:</strong>
   <%= @ventum.nombre %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @ventum.precio %>
 </p>
 
 <p>
@@ -12,5 +24,16 @@
   <%= @ventum.detalles %>
 </p>
 
+<p>
+  <strong>Mas Informacion:</strong>
+  <%= @ventum.info %>
+</p>
 
-<%= link_to 'Back', venta_path %>
+ <span class="Inquiry"> <%= link_to 'Encargar', new_inbox_path %></span>
+
+</div>
+</div>
+</div>
+
+
+

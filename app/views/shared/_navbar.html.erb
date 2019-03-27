@@ -26,12 +26,20 @@
     <div class="dropdown">
       <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#"></a> Inicio </li>
-        <li><a href="#"></a> Biografia</li>
-        <li><a href="#"></a> Blog</li>
-        <li><a href="#"></a> Galeria</li>
-        <li><a href="#"></a> Shop</li>
-        <li><a href="#"></a> Contacto</li>
+
+    <%= link_to "Inicio", root_path, class: "navbar-wagon-item navbar-wagon-link2" %>
+
+   <%= link_to "Biografia", pages_biografia_path, class: "navbar-wagon-item navbar-wagon-link2" %>
+
+   <%= link_to "Blog", blogs_path, class: "navbar-wagon-item navbar-wagon-link2" %>
+   <br>
+
+  <%= link_to "Galeria", galeria_path, class: "navbar-wagon-item navbar-wagon-link2" %>
+
+   <%= link_to "Shop", venta_path, class: "navbar-wagon-item navbar-wagon-link2" %>
+
+  <%= link_to "Contacto", pages_contacto_path, class: "navbar-wagon-item navbar-wagon-link2" %>
+
       </ul>
     </div>
   </div>

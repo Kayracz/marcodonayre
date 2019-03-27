@@ -43,8 +43,26 @@
 }
 
 
+.titulogaleria{
+ background: url(paint.png);
+}
+
+
+
 .titulogaleria h1{
-      text-align: center;
+    text-align: center;
+    margin-bottom: 6%;
+    margin-top: 5%;
+}
+
+.titulogaleria2{
+
+}
+
+
+
+.titulogaleria2 h1{
+    text-align: center;
     margin-bottom: 6%;
     margin-top: 5%;
 }
@@ -52,3 +70,21 @@
 .product-grid2 .product-image2 img {
  border-radius: 8px;
 }
+
+.showgallery{
+margin-top: 5%;
+margin-bottom: 5%;
+}
+
+.showgalleryinfo{
+
+  p{
+    font-size: 23px;
+  }
+
+  strong{
+        font-size: 31px;
+  }
+}
+
+

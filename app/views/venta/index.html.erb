@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container tituloventa">
+<div class="container-fluid tituloventa">
 <h1>En Venta</h1>
 </hr>
 
@@ -16,9 +16,9 @@
                     <a href="#"><%= cl_image_tag venta.photo, height: 900, width: 800, crop: :fill  %></a>
                     <ul class="social">
                       <i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#" data-tip="Encargar"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li><a href="/inboxes/new" data-tip="Encargar"><i class="fa fa-shopping-cart"></i></a></li>
                     </ul>
-                    <a class="add-to-cart" href="">Comprar</a>
+                    <!-- <a class="add-to-cart" href="">Comprar</a> -->
                 </div>
                 <div class="product-content2">
                     <h3 class="title"><a href="#"><%= link_to venta.nombre, venta %></a></h3>
