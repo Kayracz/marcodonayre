@@ -18,7 +18,7 @@ class InboxesTest < ApplicationSystemTestCase
     fill_in "Message", with: @inbox.message
     fill_in "Name", with: @inbox.name
     fill_in "Subject", with: @inbox.subject
-    click_on "Create Inbox"
+    click_on "Enviar"
 
     assert_text "Inbox was successfully created"
     click_on "Back"

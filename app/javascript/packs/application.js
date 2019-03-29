@@ -141,8 +141,8 @@ $(document).ready(function() {
     // Configure/customize these variables.
     var showChar = 400;  // How many characters are shown by default
     var ellipsestext = "...";
-    var moretext = "Show more";
-    var lesstext = "Show less";
+    var moretext = "Mostrar mas";
+    var lesstext = "Mostrar menos";
 
 
     $('.more').each(function() {

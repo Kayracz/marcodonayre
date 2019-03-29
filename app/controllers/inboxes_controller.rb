@@ -28,7 +28,7 @@ class InboxesController < ApplicationController
 
     respond_to do |format|
       if @inbox.save
-        format.html { redirect_to @inbox, notice: 'Inbox was successfully created.' }
+        format.html { redirect_to @inbox, notice: 'Enviado' }
         format.json { render :show, status: :created, location: @inbox }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class InboxesController < ApplicationController
   def update
     respond_to do |format|
       if @inbox.update(inbox_params)
-        format.html { redirect_to @inbox, notice: 'Inbox was successfully updated.' }
+        format.html { redirect_to @inbox, notice: 'Enviado' }
         format.json { render :show, status: :ok, location: @inbox }
       else
         format.html { render :edit }

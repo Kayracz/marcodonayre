@@ -16,12 +16,63 @@
 .product-content2{
   padding:20px 10px;
   text-align:center;
+
+  a{
+   color: indianred;
+   text-decoration: none;
+  }
+
+ a:hover {
+    color: red !important;
+    text-decoration: none;
 }
+}
+
 
 
 .product-grid2 .title a {
     color: #ce1414 !important;
     font-size: 20px !important;
 }
+
+
+
+.form-actions{
+    background-color:#ce1414 !important;
+    color: white;
+    border-radius: 20px;
+    text-align:center;
+    width: 116px;
+
+    .btn{
+      color:white;
+      background-color:#ce1414 !important;
+    }
+    .btn:hover {
+    color: ghostwhite;
+    text-decoration: none;
+    background-color:#ce1414 !important;
+}
+
+  .input{
+    background-color:#ce1414 !important;
+  }
+}
+
+
+@media only screen and (min-device-width : 375px)
+and (max-device-width : 812px)  {
+  /* STYLES GO HERE */
+.form-actions{
+margin-bottom: 20%;
+}
+
+.messagesent{
+  margin-bottom:95%;
+}
+
+}
+
+
 
 
