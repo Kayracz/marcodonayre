@@ -16,6 +16,16 @@
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+require 'uglifier'
+
+
+Uglifier.compile(js, harmony: true)
+
+
+Uglifier.new.compile(File.read("source.js"))
+# => js file minified
+
+
 console.log('Hello World from Webpacker')
 
 
