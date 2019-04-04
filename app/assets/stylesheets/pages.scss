@@ -171,18 +171,17 @@ color: gray;
     controls: 0;
 }
 
-// @media only screen and (min-width: 320px) {
-//   /* For mobile phones: */
-//  .bannermarco{
-//     height: 186px !important;
-//  }
-// }
+
 
 @media only screen and (min-device-width : 375px)
 and (max-device-width : 812px)  {
   /* STYLES GO HERE */
 .bannermarco{
     height: 212px !important;
+  }
+
+  .marco{
+    display:none !important;
   }
 }
 
@@ -193,7 +192,7 @@ and (max-device-width : 812px)  {
     display:none;
   }
 .marco{
-    display:none;
+    display:none !important;
   }
 
 }
@@ -205,7 +204,14 @@ and (max-device-width : 812px)  {
 //    height: 602px !important;
 //   }
 //   }
-
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){
+      .marco {display: none;}
+      .footer-copyright{display:none;}
+      .footer-links{align-items:center;}
+  }
 
 //biografia
 .bannermarco{
@@ -335,5 +341,7 @@ text-align:justify;
 background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+
 
 
