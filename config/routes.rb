@@ -11,5 +11,6 @@ root 'pages#home'
 
 get 'pages/biografia'
 get 'pages/contacto'
+get 'pages/admin'
 
 end
